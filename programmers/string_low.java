@@ -15,7 +15,7 @@ public class string_low {
             arr[i] = (int)s.charAt(i);
         }
         Arrays.sort(arr, Collections.reverseOrder());
-        System.out.println(arr[1]);
+        //System.out.println(arr[1]);
         for(int i = 0; i< arr.length;i++){
             answer +=Character.toString(arr[i]);
         }

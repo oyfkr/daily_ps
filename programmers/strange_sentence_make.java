@@ -7,7 +7,7 @@ public class strange_sentence_make {
     }
     public static String solution(String s){
         String answer = "";
-        String[] array = s.split(" ",-1);
+        String[] array = s.split(" ");
         for(int i = 0; i< array.length;i++){
             for(int j = 0; j<array[i].length();j++){
                 if(j % 2 == 0){
