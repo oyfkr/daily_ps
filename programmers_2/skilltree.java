@@ -12,7 +12,6 @@ public class skilltree {
         int answer = skill_trees.length;
         int preindex=0;
         int curindex=0;
-
         for(int i = 0; i< skill_trees.length;i++){
             preindex = skill_trees[i].indexOf(skill.charAt(0));
 

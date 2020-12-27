@@ -18,6 +18,7 @@ public class printer {
         for(int priority : priorities){
             pq.offer(priority);
         }
+        System.out.println(pq);
         //원소가 없을때까지 반복
         while(!pq.isEmpty()){
             //주어진 배열의 원소만큼 반복
@@ -25,6 +26,7 @@ public class printer {
                 //우선순위 큐에 맨 위에 있는 값이랑 주어진 배열의 i번째와 같은지 확인
                 //같으면 큐에서 제거 후 answer증가
                 //location과의 위치와 i가 같으면 그 값을 리턴
+                //1,1,9,1,1,1
                 if(pq.peek() == priorities[i]){
                     pq.poll();
                     answer++;

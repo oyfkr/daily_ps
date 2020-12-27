@@ -25,6 +25,7 @@ public class function_develope {
             array.add(cnt);
             cnt = 0;
         }
+        System.out.println(array);
         max = array.get(0);
         for(int i = 0; i< array.size();i++){
             if(max < array.get(i)) {
@@ -33,12 +34,11 @@ public class function_develope {
                 array1.add(index);
                 for(int j = 0; j< index; j++){
                     array.remove(0);
-                }i=0;
+                }
+                i=0;
                 if(array.size() == 1){
                     array1.add(array.size());
                 }
-            } else if(i == array.size()-1){
-                array1.add(array.size());
             }
         }
         answer = new int[array1.size()];
