@@ -20,7 +20,7 @@ public class bridge_truck {
                 weight +=truck_weights[bridge.poll()];
             }
 
-            if(cnt < truck_weights.length && truck_weights[cnt] < weight){
+            if(cnt < truck_weights.length && truck_weights[cnt] <= weight){
                 bridge.add(cnt);
                 time[cnt] = answer + bridge_length;
                 weight -= truck_weights[cnt];

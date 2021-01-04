@@ -12,18 +12,21 @@ public class string_compression {
 
         //i 만큼 검사
         for(int i = 1; i <= halflength;i++){
+            //aab baccc
             int start = 0;
             int end = start + i;
             int cnt = 1;
             int compression = 0;
             String cur = s.substring(start,end);
+            //cur = a
             String next ="";
-
+            //next = a
             start += i;
             end += i;
 
             while(end <= s.length()){
                 next = s.substring(start,end);
+                //next = a
                 if(!cur.equals(next)){
                     if(cnt>1){
                         compression += (int)(Math.log10(cnt)+1);
