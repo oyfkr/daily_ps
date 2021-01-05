@@ -9,7 +9,7 @@ public class joystick {
     public int solution(String name){
         int answer = 0;
 
-        int min = name.length()-1;
+        int min = name.length()-1; //6
 
         for(int i = 0; i<name.length();i++){
             answer += Math.min(name.charAt(i) - 'A', 'Z' - name.charAt(i) + 1);
