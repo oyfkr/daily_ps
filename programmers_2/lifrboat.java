@@ -13,6 +13,7 @@ public class lifrboat {
         int answer = 0;
         int cur = people.length-1;
         Arrays.sort(people);
+
         for(int i=0; i<=cur; i++,answer++) {
             while (cur > i && people[i] + people[cur--] > limit)
                 answer++;

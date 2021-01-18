@@ -1,7 +1,6 @@
 package programmers_2;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class terminate_pair {
     public static void main(String[] args) {
@@ -10,7 +9,6 @@ public class terminate_pair {
         System.out.println(a.solution(s));
     }
     public int solution(String s){
-        int answer = 0;
         ArrayList<Character> array = new ArrayList<>();
         for(int i = 0;i<s.length();i++){
             if(array.size() ==0){
@@ -24,6 +22,6 @@ public class terminate_pair {
         if(array.size() == 0){
             return 1;
         }
-        return answer;
+        return 0;
     }
 }

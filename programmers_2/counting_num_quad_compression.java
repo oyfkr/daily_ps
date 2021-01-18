@@ -17,11 +17,12 @@ public class counting_num_quad_compression {
         int len = arr.length;
 
         quad(arr,a,b,len);
-        answer[0] = one;
-        answer[1] = zero;
+        answer[0] = zero;
+        answer[1] = one;
         return answer;
     }
     public void quad(int[][] arr, int a,int b, int len){
+        /*
         if(len == 1){
             if(arr[a][b] == 0){
                 zero++;
@@ -29,7 +30,7 @@ public class counting_num_quad_compression {
                 one++;
             }
             return;
-        }
+        }*/
         int value = arr[a][b];
         boolean flag = true;
         for(int i = a; i<a+len;i++){
