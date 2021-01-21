@@ -20,9 +20,6 @@ public class news_clustering {
         ArrayList<String> arr2 = new ArrayList<>();
         ArrayList<String> arr3 = new ArrayList<>();
         int i = 0;
-        if(str1.length() == 0 && str2.length() == 0){
-            return 65536;
-        }
         while(i < str1.length()-1){
             if(str1.charAt(i) >='a' && str1.charAt(i)<='z' && str1.charAt(i+1) >='a' && str1.charAt(i+1)<='z') {
                 arr1.add(str1.substring(i, i + 2));
