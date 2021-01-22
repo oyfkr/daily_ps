@@ -1,7 +1,6 @@
 package programmers_2;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class news_clustering {
     public static void main(String[] args) {
