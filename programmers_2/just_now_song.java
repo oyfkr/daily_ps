@@ -28,7 +28,7 @@ public class just_now_song {
             tmp[3] = tmp[3].replace("F#","f");
             tmp[3] = tmp[3].replace("G#","g");
             tmp[3] = tmp[3].replace("E#","e");
-            
+
 
             String[] starttime = tmp[0].split(":");
             String[] endtime = tmp[1].split(":");
