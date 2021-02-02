@@ -1,5 +1,7 @@
 package programmers_2;
 
+import java.util.Arrays;
+
 public class Dialysis_traffic {
     public static void main(String[] args) {
         Dialysis_traffic s = new Dialysis_traffic();
@@ -25,7 +27,7 @@ public class Dialysis_traffic {
 
             lines[i] = ""+ sec + lines[i].substring(6);
         }
-
+        System.out.println(Arrays.toString(lines));
         for(int i = 0; i< lines.length;i++){
             //\\s를 이용하여 빈칸으로 다 쪼갠다
             String[] split = lines[i].split("\\s");
