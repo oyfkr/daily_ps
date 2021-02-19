@@ -16,7 +16,7 @@ public class immigration {
         long start = 1;// 최선의 경우
         long end = (long)times[times.length-1] * n;//최악의 경우
 
-        while(start < end){
+        while(start <= end){
             long sum = 0;
             long mid = (start+end)/2;
             for(int time : times){
@@ -24,7 +24,7 @@ public class immigration {
             }
 
             if(sum >= n){ // 심사하는 사람의 수가 더 많거나 같으므로 시간을 줄일 수 있다.
-                end = mid;
+                end = mid-1;
                 answer = mid;
             }else{// 심사하는 사람의 수가 적으므로 시간을 늘려야한다.
                 start = mid+1;
