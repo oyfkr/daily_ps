@@ -8,6 +8,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class make_bridge2 {
+    // 점의 클래스
     static class dot{
         int x;
         int y;
@@ -16,6 +17,7 @@ public class make_bridge2 {
             this.y = y;
         }
     }
+    // 시작섬과 끝섬과 그 길이를 담는 클래스
     static class edge implements Comparable<edge>{
         int s,e,v;
         public edge(int s,int e,int v){
@@ -56,6 +58,7 @@ public class make_bridge2 {
             }
         }
 
+        // bfs를 이용하여 map에 각 섬들의 번호를 넣어준다.
         for(int i = 0; i<n;i++){
             for(int j = 0; j<m;j++){
                 if (map[i][j] == 1 && !visit[i][j]){
@@ -67,6 +70,7 @@ public class make_bridge2 {
 
         visit = new boolean[n][m];
 
+        // makeBridge를 이용해 다리를 만든다
         for(int i = 0; i<n;i++){
             for(int j = 0; j<m;j++){
                 if(map[i][j] != 0){
@@ -82,6 +86,7 @@ public class make_bridge2 {
 
         int size = pq.size();
         int result = 0;
+        //크루스칼 알고리즘을 통해 최단거리를 찾는다
         for(int i = 0; i<size;i++){
             edge tmp = pq.poll();
 
@@ -101,6 +106,7 @@ public class make_bridge2 {
         }
     }
 
+    // 제한 범위를 넘어가거나 옆에가 같은 섬일때는 다시 자기자신을 넘겨준다
     private static void makeBridge(dot dot, int num) {
         int nx = dot.x;
         int ny = dot.y;
@@ -120,6 +126,7 @@ public class make_bridge2 {
                     }else if(map[nx][ny] == 0){
                         length++;
                     }else{
+                        // 2이상이어야 다리를 만들 수 있으므로 조건을 걸어준다
                         if(length>1){
                             pq.add(new edge(num,map[nx][ny], length));
                         }
