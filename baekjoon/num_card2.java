@@ -29,7 +29,7 @@ public class num_card2 {
         br.close();
     }
 
-    public static int lower_bound(int num) {
+    public static int lower_bound(int num) {//num이 처음 나오는 index
         int start = 0, last = arr1.length-1,mid;
         while(start<last){
             mid = (start+last)/2;
@@ -42,7 +42,7 @@ public class num_card2 {
         return last;
     }
 
-    public static int upper_bound(int num) {
+    public static int upper_bound(int num) {//num의 값보다 큰 값이 처음 나오는 index
         int start = 0, last = arr1.length-1,mid;
         while(start<last){
             mid = (start+last)/2;
